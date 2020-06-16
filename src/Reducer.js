@@ -1,9 +1,17 @@
 const Reducer =(state,action)=>{
+    console.log("state:",state)
+    console.log("action:",action)
     switch(action.type){
         case 'CHANGE_NAME':
-            return state[0]='Mudasir';
+            return {
+                ...state,
+                name:action.payload
+            }
         case 'CHANGE_REGNUM':
-            return state[1]=100;
+            return {
+                ...state,
+                regnum:action.payload
+            }
         default:
             return state;
     }

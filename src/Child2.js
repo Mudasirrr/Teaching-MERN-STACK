@@ -8,16 +8,16 @@ import ValueContext from './ValueContext';
 
 function Child2()
 {
-    let value =useContext(ValueContext);
+    let studentfromapp =useContext(ValueContext);
     // let arr="Ansa Abbasi";
-    let [state,dispatch]=useReducer(regReducer,value);
+    let [student,dispatch]=useReducer(regReducer,studentfromapp);
     
     // let [name,dispatch]=useReducer(regReducer,"Ansa Amjad");
     return(
         <div>
             <h1>You are in child2 for reducer.......</h1>
-            <h1>Name :{state[0]}</h1>
-            <h1>Registeration # :{state[1]}</h1>
+            <h1>Name :{student.name}</h1>
+            <h1>Registeration # :{student.regnum}</h1>
             <button onClick={()=>{dispatch({type:'CHANGE_REGNUM',payload:12});}}>Change RegNumber</button>
             <button onClick={()=>{dispatch({type:'CHANGE_NAME',payload:"Mudasir"});}}>Change Name</button>
         </div>

@@ -6,10 +6,11 @@ import Child2 from './Child2';
 import ValueContext from './ValueContext';
 
 function App() {
-  let [regn, setReg]=useState(42);
-  let value1 =["Ansa Churiii",42];
+  let value ={name:'Ansa Amjad',regnum:42};
+
+  let [student, setStudent]=useState(value);
   return (
-    <ValueContext.Provider value={value1}>
+    <ValueContext.Provider value={student}>
     <div>
 
         <h1>Hello Ansa from app.js</h1>
